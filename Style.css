@@ -147,62 +147,6 @@ h1 {
   color: #fff;
 }
 
-.portfolio-heading h2{
-  font-size: 2.5em;
-  color: #fff;
-}
-
-.portfolio .container {
-  width: 80vw;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 300px;
-  background-color: #876DF5;
-  margin: 1em;
-}
-
-.card__img {
-  width: 100%;
-  height: 150px;
-  background-image: url(Img/pc.jpg);
-  background-size: cover;
-}
-
-.card__title {
-  padding: 20px;
-}
-
-.card__proyect-links {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.card__proyect-links a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.card__proyect-links i {
-  font-size: 1.5em;
-}
-
-.button-content {
-  display: flex;
-  justify-content: center;
-  margin: 1em;
-}
-
-.project-details-button a {
-  text-decoration: none;
-  color: #876DF5;
-}
-
 
 .contact-section {
   padding: 3em;
@@ -210,7 +154,7 @@ h1 {
 
 .container-contact {
     display: flex;
-    align-items: center;
+    align-items: left;
     gap: 5em;
     margin: 0 auto;
     margin-top: 2em;
@@ -219,7 +163,7 @@ h1 {
 .contact-section img {
   width: 750px;
   height: 550px;
-  align-content: center;
+  align-content: left;
 }
 
 .form-group {
@@ -295,83 +239,10 @@ h1 {
     cursor: pointer;
   }
 
-.portfolio,
 .contact-section, .skills, .col {
   width: 100vw;
   background-color: #876DF5;
   color: #fff;
-}
-
-.portfolio-heading{
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5em;
-}
-
-.portfolio-heading h2 {
-  font-size: 2.5em;
-  color: #fff;
-}
-
-.portfolio .container {
-  width: 80vw;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card {
-  width: 300px;
-  background-color: #9782f7;
-  margin: 1em;
-}
-
-.card__img {
-  width: 100%;
-  height: 150px;
-  background-image: url(../img/2-original.png);
-  background-size: cover;
-}
-
-.card__title {
-  padding: 20px;
-}
-
-.card__proyect-links {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.card__proyect-links a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.card__proyect-links i {
-  font-size: 1.5em;
-}
-
-.button-content {
-  display: flex;
-  justify-content: center;
-  margin: 1em;
-  
-}
-
-.project-details-button a {
-    padding: 10px 20px;
-  background-color: #FFEC02;
-  border-color: black;
-  border-radius: 20px;
-  margin-top: 10px;
-  cursor: pointer;
-  color: black;
-  -webkit-box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, 0.69);
-  -moz-box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, 0.69);
-  box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, 0.69);
 }
 
 /* SECCION S K I L L S */
@@ -401,7 +272,7 @@ skills{
 .skills .fila .col h3{
   font-size: 28px;
   font-family: 'Montserrat', sans-serif;
-  margin-bottom: 25px;
+  margin-bottom: 8px;
 }
 .skills .skill > span{
   font-weight: bold;
@@ -522,6 +393,62 @@ skills{
 @keyframes proyect {
   0%{width: 0%;}
   100%{width: 94%;}
+}/* SECCION PORTFOLIO */
+.portfolio{
+  background-color: #876DF5;
+  color: #fff;
+  padding: 50px 20px;
+}
+.portfolio .contenido-seccion{
+  max-width: 1100px;
+  margin: auto;
+}
+.portfolio h2{
+  font-size: 2.5em;
+  font-family: 'Montserrat';
+  text-align: left;
+  padding: 20px 0;
+}
+.portfolio .galeria{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.portfolio .galeria .proyecto{
+  position: relative;
+  max-width: 340px;
+  height: fit-content;
+  margin: 10px;
+  cursor: pointer;
+}
+.portfolio .galeria .proyecto img{
+  width: 100%;
+  display: block;
+}
+.portfolio .galeria .proyecto .overlay{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 1s;
+  font-size: 18px;
+  letter-spacing: 3px;
+  opacity: 0;
+}
+.portfolio .galeria .proyecto .overlay h3{
+  margin-bottom: 20px;
+  transition: 1s;
+}
+.portfolio .galeria .proyecto .overlay:hover{
+  opacity: 1;
+}
+.portfolio .galeria .proyecto .overlay:hover h3{
+  margin-bottom: 0px;
 }
 
 /*seccion de contacto*/
@@ -529,20 +456,11 @@ skills{
   font-size: 2.5em;
   color: #fff;
 }
-.contact-heading{
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5em;
-}
+
 .contact-section {
   padding: 3em;
 }
 
-.contact-form {
-  
-}
 .container-contact {
   margin: 0 auto;
   margin-top: 10em;
@@ -711,5 +629,19 @@ skills{
     width: 80vw;
 
   }
+  footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
 
 }
